@@ -519,6 +519,11 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"Jmn9h":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PageDetail", ()=>PageDetail
+);
+const apiKey = "9898218d421c4e098402407e7f151bd2";
 const PageDetail = (argument1)=>{
     const preparePage = ()=>{
         const cleanedArgument = argument1.replace(/\s+/g, "-");
@@ -530,7 +535,7 @@ const PageDetail = (argument1)=>{
             articleDOM.querySelector("p.description").innerHTML = description;
         };
         const fetchGame = (url, argument)=>{
-            fetch(`${url}/${argument}`).then((response)=>response.json()
+            fetch(`${url}/${argument}?key=${apiKey}`).then((response)=>response.json()
             ).then((responseData)=>{
                 displayGame(responseData);
             });
@@ -552,6 +557,6 @@ const PageDetail = (argument1)=>{
     render();
 };
 
-},{}]},["lfiU1","Jmn9h"], "Jmn9h", "parcelRequireaa22")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["lfiU1","Jmn9h"], "Jmn9h", "parcelRequireaa22")
 
 //# sourceMappingURL=index.0c9a4cb8.js.map

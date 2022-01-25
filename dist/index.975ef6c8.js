@@ -521,12 +521,13 @@ function hmrAcceptRun(bundle, id) {
 },{}],"8lqZg":[function(require,module,exports) {
 var _indexScss = require("./style/index.scss");
 var _routes = require("./routes");
-const apiKey = "9898218d421c4e098402407e7f151bd2";
+//const apiKey = process.env.API_KEY;
 let pageArgument;
 const setRoute = ()=>{
     const path = window.location.hash.substring(1).split("/");
     pageArgument = path[1] || "";
     const pageContent = document.getElementById("pageContent");
+    console.log(_routes.routes);
     _routes.routes[path[0]](pageArgument);
     return true;
 };

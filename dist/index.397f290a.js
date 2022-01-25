@@ -523,45 +523,15 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "routes", ()=>routes
 );
-var _pageDetail = require("./PageDetail");
-var _pageList = require("./PageList");
-var _home = require("./Home");
+var _homeJs = require("./Home.js");
+var _pageDetailJs = require("./PageDetail.js");
+var _pageListJs = require("./PageList.js");
 const routes = {
-    "": _home.Home,
-    pagelist: _pageList.PageList,
-    pagedetail: _pageDetail.PageDetail
+    "": _homeJs.Home,
+    "pagelist": _pageListJs.PageList,
+    "pagedetail": _pageDetailJs.PageDetail
 };
 
-},{"./PageDetail":"Jmn9h","./PageList":"a52r4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Home":"fGRvi"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}]},["78moS","hw5Qm"], "hw5Qm", "parcelRequireaa22")
+},{"./Home.js":"fGRvi","./PageDetail.js":"Jmn9h","./PageList.js":"a52r4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["78moS","hw5Qm"], "hw5Qm", "parcelRequireaa22")
 
 //# sourceMappingURL=index.397f290a.js.map

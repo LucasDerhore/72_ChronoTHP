@@ -1,3 +1,5 @@
+const apiKey = process.env.API_KEY;
+
 const PageDetail = (argument) => {
   const preparePage = () => {
     const cleanedArgument = argument.replace(/\s+/g, "-");
@@ -11,7 +13,7 @@ const PageDetail = (argument) => {
     };
 
     const fetchGame = (url, argument) => {
-      fetch(`${url}/${argument}`)
+      fetch(`${url}/${argument}?key=${apiKey}`)
         .then((response) => response.json())
         .then((responseData) => {
           displayGame(responseData);
@@ -37,3 +39,5 @@ const PageDetail = (argument) => {
 
   render();
 };
+
+export { PageDetail };

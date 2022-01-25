@@ -519,39 +519,87 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"a52r4":[function(require,module,exports) {
-const PageList = (argument1 = "")=>{
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PageList", ()=>PageList
+);
+const apiKey = "9898218d421c4e098402407e7f151bd2";
+const PageList = (argument = "", page = 1)=>{
+    const Button = (text)=>{
+        return `<button class="btn" id="${text}">${text}</button>`;
+    };
     const preparePage = ()=>{
-        const cleanedArgument = argument1.replace(/\s+/g, "-");
-        const displayResults = (articles)=>{
-            const resultsContent = results.map((article)=>`<article class="cardGame">
-          <h1>${article.name}</h1>
-          <h2>${article.released}</h2>
-          <a href="#pagedetail/${article.id}">${article.id}</a>
-        </article>`
-            );
-            const resultsContainer = document.querySelector(".page-list .articles");
-            resultsContainer.innerHTML = resultsContent.join("\n");
+        let articles1 = "";
+        const showTags = (tagsArray)=>{
+            let array = [];
+            for (let tag of tagsArray)array.push(tag.name);
+            return array.slice(0, 10).join(", ");
         };
-        const fetchList = (url, argument)=>{
-            const finalURL = argument ? `${url}?search=${argument}` : url;
-            fetch(finalURL).then((response)=>response.json()
-            ).then((responseData)=>{
-                displayResults(responseData.results);
+        const fetchList = (url)=>{
+            let finalURL = url + `&key=${apiKey}`;
+            fetch(`${finalURL}`).then((response)=>response.json()
+            ).then((response)=>{
+                response.results.forEach((articles)=>{
+                    articles += `
+          <div class="cardGame col-4 p-3">
+          <div class="col-12 col-sm-4 flip-card border-success text-center">
+            <div class="flip-card-inner">
+              <div class="flip-card-front pic" style="background-image: url('${article.background_image}');"></div>
+              <div class="flip-card-back text-white text-center">
+                <div class="game-info text-white">
+                  <h5 class="date">${article.released}</h5>
+                  <h5 class="rating">${article.rating} / ${article.rating_top} - ${article.ratings_count} votes</h5>
+                  <p class="tags">${showTags(article.tags)}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      <a href = "#pagedetail/${article.id}" class="h3 text-white noHover link">${article.name}</a>
+    </div> 
+    `;
+                });
+                document.querySelector(".page-list .articles").innerHTML = articles1;
             });
         };
-        fetchList("https://api.rawg.io/api/games", cleanedArgument);
+        fetchList(`https://api.rawg.io/api/games?page_size=${page * 9}&dates=2022-01-22,2023-01-22&ordering=-added`);
     };
+    // Views
     const render = ()=>{
-        pageContent.innerHTML = `
-      <section class="page-list">
-        <div class="articles">...loading</div>
-      </section>
-    `;
+        pageContent.innerHTML = `      <div>
+    <h1 class="title text-white pos">Welcome,</h1>
+    <p class="text-white">
+      The Hyper Progame is the world’s premier event for computer and video games and related products. 
+      At The Hyper Progame, the video game industry’s top talent pack the Los Angeles Convention Center, connecting tens of thousands of the best, 
+      brightest, and most innovative in the interactive entertainment industry. For three exciting days, leading-edge companies, groundbreaking new 
+      technologies, and never-before-seen products will be showcased. The Hyper Progame connects you with both new and existing partners, 
+      industry executives, gamers, and social influencers providing unprecedented exposure.
+    </p>
+  </div>
+  <section class="page-list container d-flex flex-column flex-start">
+    <div class="articles row text-left">...loading</div>
+    <div class="mt-5 pt-2 text-center">
+      ${Button("Show more")}
+    </div>
+  </section>
+  `;
+        if (page >= 3) {
+            page = 3;
+            const btnShowMore = document.getElementById("Show more");
+            btnShowMore.classList.add("hidden");
+        }
         preparePage();
     };
     render();
+    const showMore = ()=>{
+        const btnShowMore = document.getElementById("Show more");
+        if (btnShowMore != null) btnShowMore.addEventListener("click", function() {
+            if (page < 3) page += 1;
+            PageList(page);
+        });
+    };
+    showMore();
 };
 
-},{}]},["apohv","a52r4"], "a52r4", "parcelRequireaa22")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["apohv","a52r4"], "a52r4", "parcelRequireaa22")
 
 //# sourceMappingURL=index.996ecb51.js.map
