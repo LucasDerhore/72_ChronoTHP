@@ -553,7 +553,7 @@ const PageList = (argument1 = "")=>{
             });
             let nextPage = fetch;
         };
-        fetchList(`https://api.rawg.io/api/games?key=${apiKey}`, cleanedArgument);
+        fetchList(`https://api.rawg.io/api/games?key=${apiKey}`, cleanedArgument + "&page_size=9");
     };
     const render = ()=>{
         pageContent.innerHTML = `

@@ -1,182 +1,145 @@
-var apiKey = process.env.API_key;
+const apiKey = `?key=${process.env.API_KEY}`;
 
-const PageDetail = (argument) => {
-  const buttonCheck = (text) => {
-    let btn = `<button class="btn btn-website">
-        <a href="#" class="text-white link-website m-3 noHover">${text}   <i class="fas fa-play"></i></a>
-      </button>`;
-    return btn;
-  };
+const PageDetail = (argument = "") => {
+  console.log("Page Detail", argument);
 
   const preparePage = () => {
-    let cleanedArgument = argument.replace(/\s+/g, "-");
-
-    const showPlatforms = (platformsArray) => {
-      let array = [];
-      for (let platform of platformsArray) {
-        array.push(platform.platform.name);
-      }
-      return array.join(", ");
-    };
-
-    const showPublishers = (publishersArray) => {
-      let array = [];
-      for (let publisher of publishersArray) {
-        array.push(publisher.name);
-      }
-      return array.join(", ");
-    };
-
-    const showDevelopers = (developersArray) => {
-      let array = [];
-      for (let developer of developersArray) {
-        array.push(developer.name);
-      }
-      return array.join(", ");
-    };
-
-    const showTags = (tagsArray) => {
-      let array = [];
-      for (let tag of tagsArray) {
-        array.push(tag.name);
-      }
-      return array.join(", ");
-    };
-
-    const showGenres = (genresArray) => {
-      let array = [];
-      for (let genre of genresArray) {
-        array.push(genre.name);
-      }
-      return array.join(", ");
-    };
-
-    const showStores = (storesArray) => {
-      let array = [];
-      for (let store of storesArray) {
-        let s = `<a href="https://${store.store.domain}" class="text-white noHover">${store.store.name}</a>`;
-        array.push(s);
-      }
-      return array.join(", ");
-    };
+    const cleanedArgument = argument.replace(/\s+/g, "-");
 
     const fetchGame = (url, argument) => {
-      let finalURL = url + argument + `?&key=${key}`;
-
-      const displayScreenshot = (gameID) => {
-        let url = `https://api.rawg.io/api/games/${gameID}/screenshots`;
-        let finalURL = url + `?&key=${apiKey}`;
-
-        fetch(`${finalURL}`)
-          .then((response) => response.json())
-          .then((response) => {
-            let { results } = response;
-            let articleDOM = document.querySelector(".page-detail .article");
-            articleDOM.querySelector("div img.screenshot1").src =
-              results[0].image;
-            articleDOM.querySelector("div img.screenshot2").src =
-              results[1].image;
-            articleDOM.querySelector("div img.screenshot3").src =
-              results[2].image;
-            articleDOM.querySelector("div img.screenshot4").src =
-              results[3].image;
-          });
-      };
+      let finalURL = url + argument + apiKey;
+      console.log(finalURL);
 
       fetch(`${finalURL}`)
         .then((response) => response.json())
         .then((response) => {
+          console.log(response);
           let {
-            id,
             name,
             released,
             description,
             background_image,
-            website,
+            developers,
             rating,
-            rating_top,
-            ratings_count,
-            platforms,
-            background_image_additional,
-            publishers,
+            website,
+            parent_platforms,
             tags,
             genres,
-            developers,
-            stores,
+            publishers,
+            ratings_count,
           } = response;
 
           let articleDOM = document.querySelector(".page-detail .article");
 
           articleDOM.querySelector("h1.title").innerHTML = name;
-          articleDOM.querySelector("p.release-date").innerHTML += released;
-          articleDOM.querySelector("p.description").innerHTML = description;
           articleDOM.querySelector(
-            "div.banner"
-          ).style.backgroundImage = `url(${background_image})`;
-          articleDOM.querySelector("a.link-website").href = website;
+            "p.release-date"
+          ).innerHTML = `Release Date: ${released}`;
+          articleDOM.querySelector(".descriptions").innerHTML = description;
+          articleDOM.querySelector("img").src = background_image;
           articleDOM.querySelector(
-            "div.gameDetails-title-rating h2"
-          ).innerHTML = `${rating} / ${rating_top} - ${ratings_count} votes`;
+            "p.devs"
+          ).innerHTML = `Studio: ${developers.map((x) => x.name)}`;
+          articleDOM.querySelector("a.web").setAttribute("href", `${website}`);
           articleDOM.querySelector(
-            "p.developers"
-          ).innerHTML += `<br>${showDevelopers(developers)}`;
+            "p.rating"
+          ).innerHTML = `Rating: ${rating}/${ratings_count} vote`;
           articleDOM.querySelector(
-            "p.platforms"
-          ).innerHTML += `<br>${showPlatforms(platforms)}`;
-          articleDOM.querySelector(
-            "p.publishers"
-          ).innerHTML += `<br>${showPublishers(publishers)}`;
-          articleDOM.querySelector("p.genres").innerHTML += `<br>${showGenres(
-            genres
+            "p.platform"
+          ).innerHTML = `Plateform: ${parent_platforms.map(
+            (x) => x.platform.name
           )}`;
-          articleDOM.querySelector("p.tags").innerHTML += `<br>${showTags(
-            tags
+          articleDOM.querySelector("p.tags").innerHTML = `Tags: ${tags.map(
+            (x) => x.slug
           )}`;
-          articleDOM.querySelector("p.stores").innerHTML += showStores(stores);
-          displayScreenshot(id);
+          articleDOM.querySelector("p.genre").innerHTML = `Genre: ${genres.map(
+            (x) => x.name
+          )}`;
+          articleDOM.querySelector(
+            "p.editor"
+          ).innerHTML = `Publishers: ${publishers.map((x) => x.name)}`;
+          articleDOM.querySelector(".btn").setAttribute("href", `${website}`);
+
+          let screenShotUrl = url + response.slug + "/screenshots" + apiKey;
+          console.log(screenShotUrl);
+          fetch(screenShotUrl)
+            .then((response) => response.json())
+            .then((response) => {
+              let { results } = response;
+
+              articleDOM.querySelector(".grid-2").innerHTML = `
+                <div class="item" style="background-image: url('${results[0].image}');"></div>
+                <div class="item" style="background-image: url('${results[1].image}');"></div>
+                <div class="item" style="background-image: url('${results[2].image}');"></div>
+                <div class="item" style="background-image: url('${results[3].image}');"></div>
+              
+              `;
+            });
+
+          let trailerUrl = url + response.id + "/movies" + apiKey;
+
+          fetch(trailerUrl)
+            .then((response) => response.json())
+            .then((response) => {
+              articleDOM.querySelector(".video").innerHTML = `
+                <source src="${response.results[0].data.max}" type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+              `;
+            });
         });
     };
-
-    fetchGame("https://api.rawg.io/api/games/", cleanedArgument);
+    fetchGame(`https://api.rawg.io/api/games/`, cleanedArgument);
   };
 
   const render = () => {
     pageContent.innerHTML = `
       <section class="page-detail">
         <div class="article">
-          <div class="container-fluid">
-            <div class="banner">
-            ${buttonCheck("Check Website ")}
+          <h1 class="title"></h1>
+          <div class="image">
+            <img src="" alt="game image">
+          </div>
+          <div class="rate">
+              <p class="rating"> </p>
+          </div>
+          <div class="release">
+            <p class="release-date"></p>
+          </div>
+          <div class="descriptions">
+            <p></p>
+          </div>
+          <div class="section">
+            <div class="developers">
+              <p class="devs"> </p>
+            </div>
+            <div class="all-tags">
+              <p class="tags"> </p>
+            </div>
+            <div class="game-genre">
+              <p class="genre"> </p>
+            </div>
+            <div class="edit">
+              <p class="editor"> </p>
+            </div>
+            <div class="website">
+              <a class="web" href="">website</a>
+            </div>
+            <div class="console">
+              <p class="platform"> </p>
             </div>
           </div>
-          <div class="gameDetails">
-            <div class="gameDetails-title-rating">
-              <h1 class="title text-white"></h1>
-              <h2></h2>
-            </div>
-            <div class="text-white">
-              <p class="description"></p>
-              <div class="grid-info">
-                <p class="release-date"><span>Release date </span></p>
-                <p class="developers"><span>Developers </span></p>
-                <p class="platforms"><span>Plateforms </span></p>
-                <p class="publishers"><span>Publishers </span></p>
-                <p class="genres"><span>Genre </span></p>
-                <p class="tags"><span>Tags </span></p>
-              </div>
-            </div>
-            <div>
-            <h1 class="title-div">BUY</h1>
-            <p class="stores text-white"></p>
-            <h1 class="title-div">SCREENSHOT</h1>
-            <div class="screenshot-section">
-              <img class="screenshot1">
-              <img class="screenshot2">
-              <img class="screenshot3">
-              <img class="screenshot4">
-            </div>
-            </div>
+          <div class="Buy">
+            <a class="btn" href="">Buy</a>
           </div>
+          <div class="section">
+            <h1 class="title">screenshots</h1>
+            <div class="grid-2"></div>
+          </div>
+          <div class="section">
+            <h1 class="title">trailer</h1>
+            <video controls class="video"></video>
+          </div>
+          
         </div>
       </section>
     `;

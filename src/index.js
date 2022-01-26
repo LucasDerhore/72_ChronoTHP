@@ -1,4 +1,9 @@
-import "./style/index.scss";
+import "./style/variables.scss";
+import "./style/body.scss";
+import "./style/header.scss";
+import "./style/main.scss";
+import "./style/section.scss";
+
 import { routes } from "./routes";
 console.log(process.env.RAWG_API);
 

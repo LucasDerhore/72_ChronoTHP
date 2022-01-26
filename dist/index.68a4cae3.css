@@ -45,4 +45,13 @@ p.text-white {
   margin-left: 200px;
   margin-right: 200px;
 }
+
+.cardGame {
+  width: 500px;
+  height: 500px;
+}
+
+.cardGame img {
+  width: 100%;
+}
 /*# sourceMappingURL=index.68a4cae3.css.map */
