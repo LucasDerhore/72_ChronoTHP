@@ -528,8 +528,8 @@ var _pageDetailJs = require("./PageDetail.js");
 var _pageListJs = require("./PageList.js");
 const routes = {
     "": _homeJs.Home,
-    "pagelist": _pageListJs.PageList,
-    "pagedetail": _pageDetailJs.PageDetail
+    pagelist: _pageListJs.PageList,
+    pagedetail: _pageDetailJs.PageDetail
 };
 
 },{"./Home.js":"fGRvi","./PageDetail.js":"Jmn9h","./PageList.js":"a52r4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["78moS","hw5Qm"], "hw5Qm", "parcelRequireaa22")

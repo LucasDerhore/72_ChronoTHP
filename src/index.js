@@ -1,7 +1,6 @@
 import "./style/index.scss";
 import { routes } from "./routes";
-
-//const apiKey = process.env.API_KEY;
+console.log(process.env.RAWG_API);
 
 let pageArgument;
 
@@ -13,6 +12,18 @@ const setRoute = () => {
   routes[path[0]](pageArgument);
   return true;
 };
+
+const searchGame = () => {
+  const input = document.getElementById("searchinput");
+  input.addEventListener("keydown", function () {
+    if (event.keyCode == 13) {
+      let gameToSearch = input.value;
+      gameToSearch = gameToSearch.replace(/\s+/g, "-");
+      window.location.href = `#pagelist/${gameToSearch}`;
+    }
+  });
+};
+searchGame();
 
 window.addEventListener("hashchange", () => setRoute());
 window.addEventListener("DOMContentLoaded", () => setRoute());

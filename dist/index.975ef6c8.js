@@ -521,7 +521,7 @@ function hmrAcceptRun(bundle, id) {
 },{}],"8lqZg":[function(require,module,exports) {
 var _indexScss = require("./style/index.scss");
 var _routes = require("./routes");
-//const apiKey = process.env.API_KEY;
+console.log(undefined);
 let pageArgument;
 const setRoute = ()=>{
     const path = window.location.hash.substring(1).split("/");
@@ -531,11 +531,22 @@ const setRoute = ()=>{
     _routes.routes[path[0]](pageArgument);
     return true;
 };
+const searchGame = ()=>{
+    const input = document.getElementById("searchinput");
+    input.addEventListener("keydown", function() {
+        if (event.keyCode == 13) {
+            let gameToSearch = input.value;
+            gameToSearch = gameToSearch.replace(/\s+/g, "-");
+            window.location.href = `#pagelist/${gameToSearch}`;
+        }
+    });
+};
+searchGame();
 window.addEventListener("hashchange", ()=>setRoute()
 );
 window.addEventListener("DOMContentLoaded", ()=>setRoute()
 );
 
-},{"./style/index.scss":"hN3b2","./routes":"hw5Qm"}],"hN3b2":[function() {},{}]},["7nZVA","8lqZg"], "8lqZg", "parcelRequireaa22")
+},{"./routes":"hw5Qm","./style/index.scss":"hN3b2"}],"hN3b2":[function() {},{}]},["7nZVA","8lqZg"], "8lqZg", "parcelRequireaa22")
 
 //# sourceMappingURL=index.975ef6c8.js.map

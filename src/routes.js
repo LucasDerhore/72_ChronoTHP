@@ -4,8 +4,8 @@ import { PageList } from "./PageList.js";
 
 const routes = {
   "": Home,
-  "pagelist": PageList,
-  "pagedetail": PageDetail,
+  pagelist: PageList,
+  pagedetail: PageDetail,
 };
 
 export { routes };
