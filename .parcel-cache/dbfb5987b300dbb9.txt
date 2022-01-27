@@ -1,11 +1,11 @@
 12499
-48/home/lucas/VideoGames_React/src/style/main.scss1643193882328838700 0
-50/home/lucas/VideoGames_React/src/style/header.scss1643194841237254500 0
+48/home/lucas/VideoGames_React/src/style/main.scss1643272648746108100 0
+50/home/lucas/VideoGames_React/src/style/header.scss1643262186739216800 0
 48/home/lucas/VideoGames_React/src/style/body.scss1643193895838212500 0
 38/home/lucas/VideoGames_React/src/style1643194917719684300 1
-42/home/lucas/VideoGames_React/src/routes.js1643185468789752000 0
-44/home/lucas/VideoGames_React/src/PageList.js1643191486001974900 0
-41/home/lucas/VideoGames_React/src/index.js1643197087376060900 0
+42/home/lucas/VideoGames_React/src/routes.js1643278331949433000 0
+44/home/lucas/VideoGames_React/src/PageList.js1643282296443311100 0
+41/home/lucas/VideoGames_React/src/index.js1643282435198047000 0
 43/home/lucas/VideoGames_React/src/index.html1643194572959705100 0
 46/home/lucas/VideoGames_React/src/assets/images1643107284086694300 1
 45/home/lucas/VideoGames_React/src/assets/fonts1643107267475382300 1
@@ -2261,7 +2261,7 @@
 78/home/lucas/VideoGames_React/node_modules/core-js/features/instance/un-this.js1643107113361844100 0
 74/home/lucas/VideoGames_React/node_modules/fastest-levenshtein/package.json1643107080322109500 0
 62/home/lucas/VideoGames_React/node_modules/inflight/inflight.js1643107080186153900 0
-55/home/lucas/VideoGames_React/dist/index.6765d2ea.js.map1643194923640191000 0
+55/home/lucas/VideoGames_React/dist/index.6765d2ea.js.map1643281700228499000 0
 82/home/lucas/VideoGames_React/node_modules/highlight.js/lib/languages/javascript.js1643107110366199900 0
 89/home/lucas/VideoGames_React/node_modules/connect/node_modules/debug/src/inspector-log.js1643107089792855600 0
 118/home/lucas/VideoGames_React/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob1643107110373197700 1
@@ -3127,7 +3127,7 @@
 75/home/lucas/VideoGames_React/node_modules/core-js/actual/array/find-last.js1643107111792048000 0
 91/home/lucas/VideoGames_React/node_modules/caniuse-lite/data/features/css-media-scripting.js1643107110211250800 0
 95/home/lucas/VideoGames_React/node_modules/caniuse-lite/data/features/css-backgroundblendmode.js1643107109773882600 0
-33/home/lucas/VideoGames_React/dist1643197087515198000 1
+33/home/lucas/VideoGames_React/dist1643282435484341700 1
 70/home/lucas/VideoGames_React/node_modules/es-abstract/2020/ToNumber.js1643107111786051200 0
 92/home/lucas/VideoGames_React/node_modules/caniuse-lite/data/features/css-at-counter-style.js1643107109755888800 0
 68/home/lucas/VideoGames_React/node_modules/@swc/helpers/src/_throw.js1643107109768883500 0
@@ -3337,7 +3337,7 @@
 67/home/lucas/VideoGames_React/node_modules/browserify-sign/README.md1643107105960217200 0
 70/home/lucas/VideoGames_React/node_modules/@parcel/package-manager/test1643107109470981500 1
 82/home/lucas/VideoGames_React/node_modules/@parcel/transformer-js/lib/loadNative.js1643107107057709800 0
-46/home/lucas/VideoGames_React/src/PageDetail.js1643194301203256000 0
+46/home/lucas/VideoGames_React/src/PageDetail.js1643263183927393200 0
 79/home/lucas/VideoGames_React/node_modules/core-js/actual/string/virtual/bold.js1643107110324213900 0
 102/home/lucas/VideoGames_React/node_modules/ansi-escapes/node_modules/type-fest/source/set-optional.d.ts1643107108707222100 0
 73/home/lucas/VideoGames_React/node_modules/caniuse-lite/data/regions/ZA.js1643107111732067900 0
@@ -3779,7 +3779,7 @@
 96/home/lucas/VideoGames_React/node_modules/@parcel/core/test/fixtures/targets-default-distdir-two1643107110717746200 1
 110/home/lucas/VideoGames_React/node_modules/@parcel/core/test/fixtures/targets-default-distdir-none/package.json1643107110712748100 0
 77/home/lucas/VideoGames_React/node_modules/core-js/modules/es.object.assign.js1643107111087278900 0
-55/home/lucas/VideoGames_React/dist/index.975ef6c8.js.map1643197087513198000 0
+55/home/lucas/VideoGames_React/dist/index.975ef6c8.js.map1643282435481831500 0
 64/home/lucas/VideoGames_React/node_modules/parent-module/index.js1643107080757967500 0
 53/home/lucas/VideoGames_React/node_modules/ora/license1643107093618066300 0
 93/home/lucas/VideoGames_React/node_modules/core-js/features/async-iterator/as-indexed-pairs.js1643107109683911900 0
@@ -4416,7 +4416,7 @@
 83/home/lucas/VideoGames_React/node_modules/@nodelib/fs.scandir/out/providers/sync.js1643107105898237300 0
 80/home/lucas/VideoGames_React/node_modules/@parcel/core/test/fixtures/module-a.js1643107110076295300 0
 70/home/lucas/VideoGames_React/node_modules/type-fest/source/opaque.d.ts1643107108116012300 0
-51/home/lucas/VideoGames_React/dist/index.996ecb51.js1643194923642190400 0
+51/home/lucas/VideoGames_React/dist/index.996ecb51.js1643282288734937700 0
 76/home/lucas/VideoGames_React/node_modules/caniuse-lite/data/features/ruby.js1643107111387180900 0
 76/home/lucas/VideoGames_React/node_modules/core-js/features/json/stringify.js1643107113045661200 0
 84/home/lucas/VideoGames_React/node_modules/@parcel/core/lib/requests/DevDepRequest.js1643107109684912200 0
@@ -4887,7 +4887,7 @@
 87/home/lucas/VideoGames_React/node_modules/@parcel/source-map/dist/wasm-bindings.js.flow1643107106338598300 0
 105/home/lucas/VideoGames_React/node_modules/@babel/helper-compilation-targets/node_modules/semver/semver.js1643107106301610600 0
 71/home/lucas/VideoGames_React/node_modules/@nodelib/fs.scandir/out/types1643107107864635500 1
-56/home/lucas/VideoGames_React/dist/index.4ed70eec.css.map1643194923625386300 0
+56/home/lucas/VideoGames_React/dist/index.4ed70eec.css.map1643272648874347600 0
 90/home/lucas/VideoGames_React/node_modules/core-js/modules/es.reflect.prevent-extensions.js1643107111176250500 0
 76/home/lucas/VideoGames_React/node_modules/@parcel/reporter-cli/src/render.js1643107108030040500 0
 69/home/lucas/VideoGames_React/node_modules/css-tree/lib/lexer/trace.js1643107110231244300 0
@@ -5049,7 +5049,7 @@
 81/home/lucas/VideoGames_React/node_modules/@parcel/utils/src/relativeBundlePath.js1643107109437992100 0
 89/home/lucas/VideoGames_React/node_modules/@parcel/package-manager/lib/NodeResolverBase.js1643107108980131900 0
 85/home/lucas/VideoGames_React/node_modules/@babel/compat-data/data/native-modules.json1643107106358592100 0
-52/home/lucas/VideoGames_React/dist/index.4ed70eec.css1643194923621388000 0
+52/home/lucas/VideoGames_React/dist/index.4ed70eec.css1643272648871349500 0
 71/home/lucas/VideoGames_React/node_modules/v8-compile-cache/CHANGELOG.md1643107105893239000 0
 39/home/lucas/VideoGames_React/.gitignore1643186374900466400 0
 77/home/lucas/VideoGames_React/node_modules/es-abstract/2017/SetFunctionName.js1643107111495145200 0
@@ -5085,7 +5085,7 @@
 96/home/lucas/VideoGames_React/node_modules/dom-serializer/node_modules/entities/lib/maps/xml.json1643107108001139100 0
 48/home/lucas/VideoGames_React/node_modules/wrappy1643107080115177400 1
 65/home/lucas/VideoGames_React/node_modules/core-js/features/symbol1643107113368842300 1
-55/home/lucas/VideoGames_React/dist/index.397f290a.js.map1643194923649188800 0
+55/home/lucas/VideoGames_React/dist/index.397f290a.js.map1643278332103163400 0
 66/home/lucas/VideoGames_React/node_modules/pako/lib/zlib/inflate.js1643107108328947700 0
 84/home/lucas/VideoGames_React/node_modules/core-js/actual/string/virtual/ends-with.js1643107110821714300 0
 65/home/lucas/VideoGames_React/node_modules/picocolors/package.json1643107080230140000 0
@@ -5277,7 +5277,7 @@
 74/home/lucas/VideoGames_React/node_modules/immutable/dist/immutable.js.flow1643109246537376800 0
 71/home/lucas/VideoGames_React/node_modules/core-js/features/set/index.js1643107112344875400 0
 51/home/lucas/VideoGames_React/node_modules/js-tokens1643107105273442700 1
-55/home/lucas/VideoGames_React/dist/index.996ecb51.js.map1643194923648188800 0
+55/home/lucas/VideoGames_React/dist/index.996ecb51.js.map1643282288738936700 0
 64/home/lucas/VideoGames_React/node_modules/ws/lib/event-target.js1643107105968213900 0
 60/home/lucas/VideoGames_React/node_modules/htmlnano/README.md1643107109863852500 0
 86/home/lucas/VideoGames_React/node_modules/lmdb/dependencies/v8/v8-fast-api-calls-v16.h1643107110388192600 0
@@ -5343,7 +5343,7 @@
 75/home/lucas/VideoGames_React/node_modules/@parcel/graph/lib/ContentGraph.js1643107108077025600 0
 86/home/lucas/VideoGames_React/node_modules/@parcel/transformer-html/src/dependencies.js1643107105989207700 0
 70/home/lucas/VideoGames_React/node_modules/css-tree/lib/lexer/search.js1643107110157268900 0
-51/home/lucas/VideoGames_React/dist/index.975ef6c8.js1643197087510198700 0
+51/home/lucas/VideoGames_React/dist/index.975ef6c8.js1643282435472345500 0
 67/home/lucas/VideoGames_React/node_modules/has-symbols/test/index.js1643107082119738600 0
 74/home/lucas/VideoGames_React/node_modules/@parcel/utils/src/escape-html.js1643107108550272800 0
 62/home/lucas/VideoGames_React/node_modules/@parcel/packager-svg1643107105829259400 1
@@ -5582,7 +5582,7 @@
 71/home/lucas/VideoGames_React/node_modules/has-tostringtag/test/tests.js1643107081301037400 0
 28/home/lucas/VideoGames_React1643111917972866200 1
 65/home/lucas/VideoGames_React/node_modules/@parcel/diagnostic/test1643107106305610100 1
-51/home/lucas/VideoGames_React/dist/index.6765d2ea.js1643194923635192900 0
+51/home/lucas/VideoGames_React/dist/index.6765d2ea.js1643281700223500400 0
 60/home/lucas/VideoGames_React/node_modules/colord/extend.d.ts1643107108214980500 0
 57/home/lucas/VideoGames_React/node_modules/@iarna/toml/lib1643107107998140700 1
 60/home/lucas/VideoGames_React/node_modules/create-hash/md5.js1643107091906075000 0
@@ -6922,7 +6922,7 @@
 84/home/lucas/VideoGames_React/node_modules/@parcel/node-resolver-core/src/builtins.js1643107108723216000 0
 67/home/lucas/VideoGames_React/node_modules/@parcel/reporter-cli/test1643107106424570600 1
 71/home/lucas/VideoGames_React/node_modules/core-js/features/math/cbrt.js1643107110353205000 0
-40/home/lucas/VideoGames_React/src/Home.js1643196113635304100 0
+40/home/lucas/VideoGames_React/src/Home.js1643282444957709500 0
 69/home/lucas/VideoGames_React/node_modules/@parcel/reporter-dev-server1643107108300957900 1
 79/home/lucas/VideoGames_React/node_modules/@parcel/transformer-sass/package.json1643109247339080800 0
 61/home/lucas/VideoGames_React/node_modules/base-x/package.json1643107105089503300 0
@@ -9724,7 +9724,7 @@
 66/home/lucas/VideoGames_React/node_modules/json-source-map/index.js1643107105722294600 0
 72/home/lucas/VideoGames_React/node_modules/core-js/es/object/is-frozen.js1643107112435844900 0
 78/home/lucas/VideoGames_React/node_modules/csso/lib/replace/atrule/keyframes.js1643107108924150200 0
-51/home/lucas/VideoGames_React/dist/index.397f290a.js1643194923643190000 0
+51/home/lucas/VideoGames_React/dist/index.397f290a.js1643278332100164400 0
 78/home/lucas/VideoGames_React/node_modules/core-js/modules/es.string.replace.js1643107111264221100 0
 81/home/lucas/VideoGames_React/node_modules/csso/lib/replace/property/background.js1643107106366589600 0
 71/home/lucas/VideoGames_React/node_modules/jake/node_modules/chalk/types1643107106367589400 1
@@ -12007,7 +12007,7 @@
 91/home/lucas/VideoGames_React/node_modules/lmdb/prebuilds/darwin-arm64/node.abi72.glibc.node1643107111466154900 0
 90/home/lucas/VideoGames_React/node_modules/es-abstract/2019/AbstractRelationalComparison.js1643107108615252000 0
 76/home/lucas/VideoGames_React/node_modules/is-generator-function/package.json1643107081177077500 0
-51/home/lucas/VideoGames_React/src/style/section.scss1643194881586952600 0
+51/home/lucas/VideoGames_React/src/style/section.scss1643265443284594800 0
 78/home/lucas/VideoGames_React/node_modules/is-generator-function/test/corejs.js1643107080803951600 0
 80/home/lucas/VideoGames_React/node_modules/is-generator-function/test/uglified.js1643107081088858800 0
 49/home/lucas/VideoGames_React/node_modules/is-glob1643107080173158900 1

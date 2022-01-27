@@ -23,10 +23,10 @@ const PageList = (argument = "") => {
                 <h1>${article.name}</h1>
                 
                 <div class="overview">
-                  <h3>${article.name}</h3>
-                  <h1>${article.rating_top}</h1>
-                  <p>Rating: ${article.metacritic}</p>
-                    <a href = "#pagedetail/${article.slug}">${article.slug}</a>
+                  
+                  <h1>${article.released}</h1>
+                  <p>Note : ${article.rating}</p>
+                    <a href = "#pagedetail/${article.slug}">${article.name}</a>
                 </div>
               </div>
             `;

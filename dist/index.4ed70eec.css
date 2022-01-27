@@ -132,17 +132,20 @@ a:visited.block:hover {
   padding: 1rem;
   max-height: 100%;
   transform: translateY(100%);
-  transition: transform 0.5s ease-in;
+  transition: transform 0.3s ease-in;
   background-color: white;
+  opacity: 0.9;
 }
 
 .overview h1 {
   color: #191919;
+  opacity: 1 !important;
 }
 
 .overview p {
-  color: #2c66b1;
+  color: #5e7fd8;
   font-weight: bolder;
+  opacity: 1 !important;
 }
 
 .cardGame:hover .overview {
