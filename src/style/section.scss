@@ -1,5 +1,10 @@
 @import "variables.scss";
 
+.article {
+  text-align: center;
+  padding: 50px;
+}
+
 .article h1 {
   font-size: 3rem;
   color: $red;
@@ -20,7 +25,7 @@
 .description {
   font-size: 2rem;
   color: $white;
-  margin-left: 200px;
+  margin-left: 150px;
 }
 .description h1 {
   font-size: 4rem;
@@ -33,7 +38,6 @@
 }
 
 .descriptions {
-  width: 80%;
   color: $white;
 }
 

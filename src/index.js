@@ -5,7 +5,7 @@ import "./style/main.scss";
 import "./style/section.scss";
 
 import { routes } from "./routes";
-console.log(process.env.RAWG_API);
+console.log(process.env.API_KEY);
 
 let pageArgument;
 
@@ -20,7 +20,7 @@ const setRoute = () => {
 
 const searchGame = () => {
   const input = document.getElementById("searchinput");
-  input.addEventListener("keydown", function () {
+  input.addEventListener("keydown", function (event) {
     if (event.keyCode == 13) {
       let gameToSearch = input.value;
       gameToSearch = gameToSearch.replace(/\s+/g, "-");

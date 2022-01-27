@@ -4,8 +4,10 @@
 
 ![THP](https://img.shields.io/badge/THP-Project-red)
 ![JS](https://img.shields.io/badge/-JavaScript-yellow)
-![Parcel](https://img.shields.io/badge/100Code-brightgreen)
+![100Code](https://img.shields.io/badge/100Code-brightgreen)
 ![Parcel](https://img.shields.io/badge/Parcel-orange)
+![SCSS](https://img.shields.io/badge/SCSS-pink)
+![HTML](https://img.shields.io/badge/HTML-orange)
 
 ## API
 

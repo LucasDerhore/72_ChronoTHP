@@ -525,7 +525,7 @@ var _headerScss = require("./style/header.scss");
 var _mainScss = require("./style/main.scss");
 var _sectionScss = require("./style/section.scss");
 var _routes = require("./routes");
-console.log(undefined);
+console.log("9898218d421c4e098402407e7f151bd2");
 let pageArgument;
 const setRoute = ()=>{
     const path = window.location.hash.substring(1).split("/");
@@ -537,7 +537,7 @@ const setRoute = ()=>{
 };
 const searchGame = ()=>{
     const input = document.getElementById("searchinput");
-    input.addEventListener("keydown", function() {
+    input.addEventListener("keydown", function(event) {
         if (event.keyCode == 13) {
             let gameToSearch = input.value;
             gameToSearch = gameToSearch.replace(/\s+/g, "-");

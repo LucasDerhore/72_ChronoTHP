@@ -16,6 +16,7 @@ const PageList = (argument = "") => {
         .then((response) => {
           console.log(response);
           response.results.forEach((article) => {
+            console.log(article);
             articles += `
               <div class="cardGame">
                 <img src="${article.background_image}" alt="game image">
@@ -23,7 +24,7 @@ const PageList = (argument = "") => {
                 
                 <div class="overview">
                   <h3>${article.name}</h3>
-                  <h1>${article.released}</h1>
+                  <h1>${article.rating_top}</h1>
                   <p>Rating: ${article.metacritic}</p>
                     <a href = "#pagedetail/${article.slug}">${article.slug}</a>
                 </div>
